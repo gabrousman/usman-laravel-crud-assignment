@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <div class="form-container">
-                    <form method="post" action="{{ route('user.edit.update.submit') }}">
+                    <form method="post" action="{{ route('add.info.form.submit') }}">
                         {{ csrf_field() }}
                         <input type="text" value="{{ $data->id }}" hidden="" name="user_id"/>
                         <div class="row">
