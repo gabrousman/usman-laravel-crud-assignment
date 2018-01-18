@@ -23,16 +23,16 @@
                                     <option value="">Select Province</option>
                                     <option value="Ontario" @if( old('province',$data->province)== 'Ontario') selected="selected" @endif>Ontario</option>
                                     <option value="Québec" @if( old('province',$data->province)== 'Québec') selected="selected" @endif>Québec</option>
-                                    <option value="Nova-Scotia" @if( old('province',$data->province)== 'Nova-Scotia') selected="selected" @endif>Nova Scotia</option>
-                                    <option value="New-Brunswick" @if( old('province',$data->province)== 'New-Brunswick') selected="selected" @endif>New Brunswick</option>
+                                    <option value="Nova Scotia" @if( old('province',$data->province)== 'Nova Scotia') selected="selected" @endif>Nova Scotia</option>
+                                    <option value="New Brunswick" @if( old('province',$data->province)== 'New Brunswick') selected="selected" @endif>New Brunswick</option>
                                     <option value="Manitoba" @if( old('province',$data->province)== 'Manitoba') selected="selected" @endif>Manitoba</option>
-                                    <option value="British-Columbia" @if( old('province',$data->province)== 'British-Columbia') selected="selected" @endif>British Columbia</option>
-                                    <option value="Prince-Edward-Island" @if( old('province',$data->province)== 'Prince-Edward-Island') selected="selected" @endif>Prince Edward Island</option>
+                                    <option value="British Columbia" @if( old('province',$data->province)== 'British Columbia') selected="selected" @endif>British Columbia</option>
+                                    <option value="Prince Edward Island" @if( old('province',$data->province)== 'Prince Edward Island') selected="selected" @endif>Prince Edward Island</option>
                                     <option value="Saskatchewan" @if( old('province',$data->province)== 'Saskatchewan') selected="selected" @endif>Saskatchewan</option>
                                     <option value="Alberta" @if( old('province',$data->province)== 'Alberta') selected="selected" @endif>Alberta</option>
-                                    <option value="Newfoundland-and-Labrador" @if( old('province',$data->province)== 'Newfoundland-and-Labrador') selected="selected" @endif>Newfoundland and Labrador</option>
-                                    <option value="Northwest-Territories" @if( old('province',$data->province)== 'Northwest-Territories') selected="selected" @endif>Northwest Territories</option>
-                                    <option value="Yukon" @if( old('province',$data->province)== 'Northwest-Territories') selected="selected" @endif>Yukon</option>
+                                    <option value="Newfoundland and Labrador" @if( old('province',$data->province)== 'Newfoundland and Labrador') selected="selected" @endif>Newfoundland and Labrador</option>
+                                    <option value="Northwest Territories" @if( old('province',$data->province)== 'Northwest Territories') selected="selected" @endif>Northwest Territories</option>
+                                    <option value="Yukon" @if( old('province',$data->province)== 'Yukon') selected="selected" @endif>Yukon</option>
                                     <option value="Nunavut" @if( old('province',$data->province)== 'Nunavut') selected="selected" @endif>Nunavut</option>
                                 </select>
                                 @if ($errors->has('province')) <span class="validation-error">{{ $errors->first('province') }} </span> @endif

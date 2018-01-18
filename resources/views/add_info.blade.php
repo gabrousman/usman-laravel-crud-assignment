@@ -23,15 +23,15 @@
                                     <option value="">Select Province</option>
                                     <option value="Ontario" @if( old('province')== 'Ontario') selected="selected" @endif>Ontario</option>
                                     <option value="Québec" @if( old('province')== 'Québec') selected="selected" @endif>Québec</option>
-                                    <option value="Nova-Scotia" @if( old('province')== 'Nova-Scotia') selected="selected" @endif>Nova Scotia</option>
-                                    <option value="New-Brunswick" @if( old('province')== 'New-Brunswick') selected="selected" @endif>New Brunswick</option>
+                                    <option value="Nova Scotia" @if( old('province')== 'Nova Scotia') selected="selected" @endif>Nova Scotia</option>
+                                    <option value="New Brunswick" @if( old('province')== 'New Brunswick') selected="selected" @endif>New Brunswick</option>
                                     <option value="Manitoba" @if( old('province')== 'Manitoba') selected="selected" @endif>Manitoba</option>
-                                    <option value="British-Columbia" @if( old('province')== 'British-Columbia') selected="selected" @endif>British Columbia</option>
-                                    <option value="Prince-Edward-Island" @if( old('province')== 'Prince-Edward-Island') selected="selected" @endif>Prince Edward Island</option>
+                                    <option value="British Columbia" @if( old('province')== 'British Columbia') selected="selected" @endif>British Columbia</option>
+                                    <option value="Prince Edward Island" @if( old('province')== 'Prince Edward Island') selected="selected" @endif>Prince Edward Island</option>
                                     <option value="Saskatchewan" @if( old('province')== 'Saskatchewan') selected="selected" @endif>Saskatchewan</option>
                                     <option value="Alberta" @if( old('province')== 'Alberta') selected="selected" @endif>Alberta</option>
-                                    <option value="Newfoundland-and-Labrador" @if( old('Newfoundland-and-Labrador')== 'Ontario') selected="selected" @endif>Newfoundland and Labrador</option>
-                                    <option value="Northwest-Territories" @if( old('Northwest-Territories')== 'Ontario') selected="selected" @endif>Northwest Territories</option>
+                                    <option value="Newfoundland and Labrador" @if( old('Newfoundland-and-Labrador')== 'Ontario') selected="selected" @endif>Newfoundland and Labrador</option>
+                                    <option value="Northwest Territories" @if( old('Northwest Territories')== 'Northwest Territories') selected="selected" @endif>Northwest Territories</option>
                                     <option value="Yukon" @if( old('province')== 'Yukon') selected="selected" @endif>Yukon</option>
                                     <option value="Nunavut" @if( old('province')== 'Nunavut') selected="selected" @endif>Nunavut</option>
                                 </select>
