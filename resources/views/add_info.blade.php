@@ -22,7 +22,7 @@
                                 <select class="select-option inputText" name="province">
                                     <option value="">Select Province</option>
                                     <option value="Ontario" @if( old('province')== 'Ontario') selected="selected" @endif>Ontario</option>
-                                    <option value="Québec" @if( old('province')== 'Québec') selected="selected" @endif>Québec</option>
+                                    <option value="QuÃ©bec" @if( old('province')== 'QuÃ©bec') selected="selected" @endif>QuÃ©bec</option>
                                     <option value="Nova-Scotia" @if( old('province')== 'Nova-Scotia') selected="selected" @endif>Nova Scotia</option>
                                     <option value="New-Brunswick" @if( old('province')== 'New-Brunswick') selected="selected" @endif>New Brunswick</option>
                                     <option value="Manitoba" @if( old('province')== 'Manitoba') selected="selected" @endif>Manitoba</option>
