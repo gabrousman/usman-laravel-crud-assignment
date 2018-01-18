@@ -37,13 +37,13 @@ class PagesController extends Controller {
         
         //Validate Phone Number
         Validator::extend('CanadaPhone', function($attribute, $value, $parameters) {
-            $pattern = "/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/";
+            $pattern = "/^(?:\(\d{3}\)|\d{3}-)\s?\d{3}-\d{4}$/";
             $match = preg_match($pattern, $value);
             return $match;
         });
         
         //Validate Postal Codes
-        Validator::extend('CanadaZip', function($attribute, $value, $parameters) {
+        Validator::extend('CanadaPostCode', function($attribute, $value, $parameters) {
             $pattern = "/^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$/";
             $match = preg_match($pattern, $value);
             return $match;
@@ -68,11 +68,11 @@ class PagesController extends Controller {
             'name' => 'required|min:2',
             'province' => 'required',
             'phone' => 'required|CanadaPhone',
-            'postal_code' => 'required|CanadaZip'
+            'postal_code' => 'required|CanadaPostCode'
         );
         
         //For Salery Conditional Validation
-        if ($province == 'Ontario' || $province == 'Nova-Scotia') {
+        if ($province == 'Québec') {
             $rules['salary'] = 'required|PriceExtravalidate';
         } else {
 
@@ -135,14 +135,14 @@ class PagesController extends Controller {
         
         //Validate Phone Number
         Validator::extend('CanadaPhone', function($attribute, $value, $parameters) {
-            $pattern = "/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/";
+            $pattern = "/^(?:\(\d{3}\)|\d{3}-)\s?\d{3}-\d{4}$/";
             $match = preg_match($pattern, $value);
             return $match;
         });
         
         //Validate Postal Codes
         Validator::extend('CanadaPostCode', function($attribute, $value, $parameters) {
-            $pattern = "/^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]\s?[0-9][A-Z][0-9]$/";
+            $pattern = "/^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$/";
             $match = preg_match($pattern, $value);
             return $match;
         });
@@ -166,11 +166,11 @@ class PagesController extends Controller {
             'name' => 'required|min:2',
             'province' => 'required',
             'phone' => 'required|CanadaPhone',
-            'postal_code' => 'required|CanadaZip'
+            'postal_code' => 'required|CanadaPostCode'
         );
         
         //For Salery Conditional Validation
-        if ($province == 'Ontario' || $province == 'Nova-Scotia') {
+        if ($province == 'Québec') {
             $rules['salary'] = 'required|PriceExtravalidate';
         } else {
 
@@ -186,7 +186,7 @@ class PagesController extends Controller {
             'salary.price_extravalidate' => 'Please enter a valid amount format.'
         );
         //Call Request Validator
-        $this->validate($request, $rules, $messages);  
+        $this->validate($request, $rules, $messages);
         
         $u_id = $request->input('user_id');
         $user = User::find($u_id);
